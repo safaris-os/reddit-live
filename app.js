@@ -1,5 +1,5 @@
 const EDGE_FUNCTION_URL =
-  "https://dntnbampnqhysvtxisow.supabase.co/functions/v1/reddit-comments";
+  "https://llulhbguufhujirowzbu.supabase.co/functions/v1/reddit-comments";
 
 const POLL_INTERVAL_MS = 10_000;
 const USE_MOCK_DATA = true;
