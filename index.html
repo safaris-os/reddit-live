@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reddit Live</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">EARLY BUILD · MOCK DATA</p>
+      <h1>Reddit Live</h1>
+      <p class="subtitle">Paste a Reddit thread URL and follow it as a chronological live comment stream.</p>
+    </header>
+
+    <form id="thread-form" class="input-card">
+      <label for="thread-url">Reddit thread URL</label>
+      <div class="input-row">
+        <input
+          id="thread-url"
+          type="url"
+          inputmode="url"
+          placeholder="https://www.reddit.com/r/soccer/comments/abc123/match_thread/"
+          autocomplete="off"
+          required
+        >
+        <button id="load-button" type="submit">Start stream</button>
+      </div>
+      <p id="status" class="status" aria-live="polite">Ready. Development mode currently uses simulated comments.</p>
+    </form>
+
+    <section id="thread-card" class="thread-card hidden">
+      <div>
+        <p id="subreddit" class="eyebrow"></p>
+        <h2 id="thread-title"></h2>
+      </div>
+      <div class="thread-actions">
+        <span id="live-badge" class="live-badge">LIVE</span>
+        <button id="pause-button" type="button" class="secondary">Pause</button>
+        <a id="reddit-link" target="_blank" rel="noreferrer">Open on Reddit</a>
+      </div>
+    </section>
+
+    <section id="results" class="results hidden">
+      <div class="results-header">
+        <h3>Comments</h3>
+        <span id="comment-count"></span>
+      </div>
+      <div id="comments" class="comments"></div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
